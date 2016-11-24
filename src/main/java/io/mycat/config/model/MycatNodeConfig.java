@@ -30,6 +30,7 @@ import java.io.Serializable;
  * @author mycat
  */
 public final class MycatNodeConfig implements Serializable{
+    private static final long serialVersionUID = -6605226933829917213L;
 
     private String name;
     private String host;

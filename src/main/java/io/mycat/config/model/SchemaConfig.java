@@ -34,6 +34,7 @@ import java.util.Set;
  * @author mycat
  */
 public class SchemaConfig implements Serializable{
+	private static final long serialVersionUID = -6605226933829917213L;
 	private final Random random = new Random();
 	private final String name;
 	private final Map<String, TableConfig> tables;

@@ -27,6 +27,7 @@ import com.alibaba.druid.sql.ast.statement.SQLTableElement;
 import io.mycat.config.model.rule.RuleConfig;
 import io.mycat.util.SplitUtil;
 
+import javax.annotation.Nonnull;
 import java.io.Serializable;
 import java.util.*;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
@@ -35,6 +36,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * @author mycat
  */
 public class TableConfig implements Serializable{
+	private static final long serialVersionUID = -6605226933829917213L;
 	public static final int TYPE_GLOBAL_TABLE = 1;
 	public static final int TYPE_GLOBAL_DEFAULT = 0;
 	private final String name;
@@ -64,10 +66,10 @@ public class TableConfig implements Serializable{
 	private ReentrantReadWriteLock reentrantReadWriteLock = new ReentrantReadWriteLock(false);
 
 
-	public TableConfig(String name, String primaryKey, boolean autoIncrement,boolean needAddLimit, int tableType,
-			String dataNode,Set<String> dbType, RuleConfig rule, boolean ruleRequired,
-			TableConfig parentTC, boolean isChildTable, String joinKey,
-			String parentKey,String subTables) {
+	public TableConfig(String name, @Nonnull String primaryKey, boolean autoIncrement, boolean needAddLimit, int tableType,
+					   String dataNode, Set<String> dbType, RuleConfig rule, boolean ruleRequired,
+					   TableConfig parentTC, boolean isChildTable, String joinKey,
+					   String parentKey, String subTables) {
 		if (name == null) {
 			throw new IllegalArgumentException("table name is null");
 		} else if (dataNode == null) {

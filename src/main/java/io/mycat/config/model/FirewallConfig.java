@@ -56,7 +56,7 @@ import java.util.Map;
  * @author zhuam
  */
 public final class FirewallConfig implements Serializable{
-	
+	private static final long serialVersionUID = -6605226933829917213L;
 	private static final Logger LOGGER = LoggerFactory.getLogger(FirewallConfig.class);
 	
     private Map<String, List<UserConfig>> whitehost;

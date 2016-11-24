@@ -37,6 +37,7 @@ import java.util.*;
  * @author mycat
  */
 public class ClusterConfig implements Serializable{
+    private static final long serialVersionUID = -6605226933829917213L;
     private final Map<String, MycatNodeConfig> nodes;
     private final Map<String, List<String>> groups;
 

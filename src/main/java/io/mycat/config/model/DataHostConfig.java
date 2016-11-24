@@ -40,6 +40,7 @@ import java.util.regex.Pattern;
  *
  */
 public class DataHostConfig implements Serializable{
+	private static final long serialVersionUID = -6605226933829917213L;
 	public static final int NOT_SWITCH_DS = -1;
 	public static final int DEFAULT_SWITCH_DS = 1;
 	public static final int SYN_STATUS_SWITCH_DS = 2;

@@ -26,7 +26,8 @@ package io.mycat.config.model;
 import java.io.Serializable;
 
 public class DBHostConfig implements Serializable{
-	
+
+	private static final long serialVersionUID = -6605226933829917213L;
 	private long idleTimeout = SystemConfig.DEFAULT_IDLE_TIMEOUT; // 连接池中连接空闲超时时间
 	private final String hostName;
 	private final String ip;

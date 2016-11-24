@@ -31,7 +31,7 @@ import java.io.Serializable;
  * @author mycat
  */
 public final class TableRuleConfig implements Serializable{
-
+    private static final long serialVersionUID = -6605226933829917213L;
     private final String name;
     private final RuleConfig[] rules;
 
@@ -53,7 +53,8 @@ public final class TableRuleConfig implements Serializable{
         return rules;
     }
 
-    public static final class RuleConfig {
+    public static final class RuleConfig implements Serializable{
+        private static final long serialVersionUID = -6605226933829917213L;
         private String tableRuleName;
         /** upper-case */
         private final String[] columns;

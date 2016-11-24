@@ -35,7 +35,7 @@ import java.io.Serializable;
  * @author mycat
  */
 public final class SystemConfig implements Serializable{
-
+	private static final long serialVersionUID = -6605226933829917213L;
 	public static final String SYS_HOME = "MYCAT_HOME";
 	private static final int DEFAULT_PORT = 8066;
 	private static final int DEFAULT_MANAGER_PORT = 9066;
