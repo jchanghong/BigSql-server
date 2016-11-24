@@ -23,6 +23,7 @@
  */
 package io.mycat.config.model;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -32,7 +33,7 @@ import java.util.Set;
 /**
  * @author mycat
  */
-public class SchemaConfig {
+public class SchemaConfig implements Serializable{
 	private final Random random = new Random();
 	private final String name;
 	private final Map<String, TableConfig> tables;

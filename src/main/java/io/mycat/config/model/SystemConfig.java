@@ -23,17 +23,18 @@
  */
 package io.mycat.config.model;
 
+import io.mycat.config.Isolations;
+
 import java.io.File;
 import java.io.IOException;
-
-import io.mycat.config.Isolations;
+import java.io.Serializable;
 
 /**
  * 系统基础配置项
  *
  * @author mycat
  */
-public final class SystemConfig {
+public final class SystemConfig implements Serializable{
 
 	public static final String SYS_HOME = "MYCAT_HOME";
 	private static final int DEFAULT_PORT = 8066;

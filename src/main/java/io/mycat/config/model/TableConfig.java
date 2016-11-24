@@ -23,19 +23,18 @@
  */
 package io.mycat.config.model;
 
-import java.util.*;
-import java.util.concurrent.locks.ReentrantLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
-
-import com.alibaba.druid.sql.ast.SQLDataType;
 import com.alibaba.druid.sql.ast.statement.SQLTableElement;
 import io.mycat.config.model.rule.RuleConfig;
 import io.mycat.util.SplitUtil;
 
+import java.io.Serializable;
+import java.util.*;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 /**
  * @author mycat
  */
-public class TableConfig {
+public class TableConfig implements Serializable{
 	public static final int TYPE_GLOBAL_TABLE = 1;
 	public static final int TYPE_GLOBAL_DEFAULT = 0;
 	private final String name;

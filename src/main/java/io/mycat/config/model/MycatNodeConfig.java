@@ -23,11 +23,13 @@
  */
 package io.mycat.config.model;
 
+import java.io.Serializable;
+
 /**
  * @author mycat
  * @author mycat
  */
-public final class MycatNodeConfig {
+public final class MycatNodeConfig implements Serializable{
 
     private String name;
     private String host;

@@ -23,7 +23,9 @@
  */
 package io.mycat.config.model;
 
-public class DBHostConfig {
+import java.io.Serializable;
+
+public class DBHostConfig implements Serializable{
 	
 	private long idleTimeout = SystemConfig.DEFAULT_IDLE_TIMEOUT; // 连接池中连接空闲超时时间
 	private final String hostName;

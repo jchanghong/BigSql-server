@@ -23,12 +23,13 @@
  */
 package io.mycat.config.model;
 
+import java.io.Serializable;
 import java.util.Set;
 
 /**
  * @author mycat
  */
-public class UserConfig {
+public class UserConfig implements Serializable{
 
     private String name;
     private String password;						//明文
