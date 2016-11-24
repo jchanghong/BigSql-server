@@ -23,12 +23,6 @@
  */
 package io.mycat.server;
 
-import java.io.IOException;
-import java.nio.channels.NetworkChannel;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import io.mycat.MycatServer;
 import io.mycat.config.ErrorCode;
 import io.mycat.config.model.SchemaConfig;
@@ -43,6 +37,11 @@ import io.mycat.server.response.Ping;
 import io.mycat.server.util.SchemaUtil;
 import io.mycat.util.SplitUtil;
 import io.mycat.util.TimeUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.nio.channels.NetworkChannel;
 
 /**
  * @author mycat

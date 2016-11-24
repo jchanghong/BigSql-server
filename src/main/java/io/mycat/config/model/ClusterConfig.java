@@ -45,6 +45,10 @@ public class ClusterConfig implements Serializable{
         nodes = Collections.unmodifiableMap(loadNode(root, port));
         groups = Collections.unmodifiableMap(loadGroup(root, nodes));
     }
+    public ClusterConfig() {
+        nodes = new HashMap<>();
+        groups = new HashMap<>();
+    }
 
     public Map<String, MycatNodeConfig> getNodes() {
         return nodes;
