@@ -1,6 +1,5 @@
 package io.mycat.config.loader.changhong;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
 import java.nio.MappedByteBuffer;
@@ -16,7 +15,7 @@ import java.util.concurrent.Executors;
  * Created by 长宏 on 2016/11/23 0023.
  * 磁盘map实现。方法3
  */
-public class MyDiscMap3 implements Map<String, Object> ,Log{
+public class MyDiscMap3 implements Map<String, Object> {
     private static final int INITSIZE = 1024 * 1024 * 1;
     private FileChannel fileChannel;
     private int filesize = 0;
@@ -111,7 +110,7 @@ public class MyDiscMap3 implements Map<String, Object> ,Log{
     }
 
     @Override
-    public void putAll(@NotNull Map<? extends String, ?> m) {
+    public void putAll( Map<? extends String, ?> m) {
 
         map.putAll(m);
         executor.execute(synrunnable);
@@ -125,19 +124,16 @@ public class MyDiscMap3 implements Map<String, Object> ,Log{
 
     }
 
-    @NotNull
     @Override
     public Set<String> keySet() {
         return map.keySet();
     }
 
-    @NotNull
     @Override
     public Collection<Object> values() {
         return map.values();
     }
 
-    @NotNull
     @Override
     public Set<Entry<String, Object>> entrySet() {
         return map.entrySet();
