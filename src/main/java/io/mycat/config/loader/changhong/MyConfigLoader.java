@@ -11,6 +11,31 @@ import java.util.Map;
  * Created by jiang on 2016/11/24 0024.
  */
 public class MyConfigLoader implements ConfigLoader {
+    private Map<String, SchemaConfig> schemaConfigMap;
+    private Map<String, DataNodeConfig> dataNodeConfigMap;
+    private Map<String, DataHostConfig> dataHostConfigMap;
+    private SystemConfig systemConfig;
+    private Map<String, UserConfig> userConfigMap;
+    private FirewallConfig firewallConfig;
+    private ClusterConfig clusterConfig;
+    static final String DEFALUT_FILENAME = "map.mapdb";
+    private MyDiscMap3 map3;
+/***把配置保存到文件*/
+    public void save() {
+
+    }
+    public MyConfigLoader() {
+        this(null);
+    }
+   public MyConfigLoader(String mapfilename) {
+       if (mapfilename == null) {
+           map3 = new MyDiscMap3(DEFALUT_FILENAME);
+       }
+       else {
+           map3 = new MyDiscMap3(mapfilename);
+       }
+
+    }
     @Override
     public SchemaConfig getSchemaConfig(String schema) {
         TableConfig tableConfig = new TableConfig("PERSON", "id", false, false,
